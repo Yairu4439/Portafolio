@@ -25,7 +25,7 @@ const Home = () => {
                         <Link href="/proyectos" className="btn btn-primary">
                             {t('View Projects')} <ArrowRightIcon className="icon-sm ml-sm" />
                         </Link>
-                        <a href="https://github.com/YahirDev21" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+                        <a href="https://github.com/Yairu4439" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
                             <CodeBracketIcon className="icon-sm mr-sm" />
                             GitHub
                         </a>

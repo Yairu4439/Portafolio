@@ -11,7 +11,7 @@ const projects = [
         description: 'Herramienta interactiva para visualizar diferencias entre archivos de código. Desarrollada con React y algoritmos de diff.',
         tags: ['React', 'Algorithms', 'Utility'],
         demoLink: '/proyectos/comparador',
-        repoLink: 'https://github.com/tu-usuario/comparador',
+        repoLink: 'https://github.com/Yairu4439/Portafolio',
         isMiniProject: true,
         transKey: 'Code Comparator'
     },
