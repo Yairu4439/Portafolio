@@ -1,0 +1,90 @@
+/* Icons & Utils */
+.icon-box {
+    padding: 0.75rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+}
+
+.icon-box svg {
+    color: var(--sky-600);
+    /* Was var(--primary) */
+}
+
+[data-theme="dark"] .icon-box svg {
+    color: var(--sky-400);
+}
+
+.icon-sm {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.icon-xs {
+    width: 1rem;
+    height: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.gap-sm {
+    gap: 1rem;
+}
+
+.gap-md {
+    gap: 1.5rem;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-main {
+    color: var(--text-primary);
+}
+
+.text-muted {
+    color: var(--text-secondary);
+}
+
+.text-highlight {
+    color: var(--text-highlight);
+}
+
+.ml-sm {
+    margin-left: 0.5rem;
+}
+
+.mr-sm {
+    margin-right: 0.5rem;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}

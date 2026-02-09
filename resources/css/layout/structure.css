@@ -1,0 +1,50 @@
+/* Layout */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.section {
+    padding: calc(var(--header-height) + 4rem) 0 6rem;
+    /* Ensure top padding clears the fixed header */
+}
+
+/* Page Section Typography */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    /* Was var(--primary) */
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+}
+
+.main-footer {
+    border-top: 1px solid var(--border-color);
+    padding: 2rem 0;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: auto;
+}

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+    background-image:
+        radial-gradient(circle at 15% 50%, rgba(201, 106, 120, 0.15) 0%, transparent 25%),
+        /* Wine-300 */
+        radial-gradient(circle at 85% 30%, rgba(95, 168, 211, 0.15) 0%, transparent 25%);
+    /* Sky-400 */
+    background-attachment: fixed;
+    /* Keeps gradient in place */
+}

@@ -1,0 +1,100 @@
+:root {
+    /* --- COLOR SCALES (Base Palette) --- */
+
+    /* Wine (Primary Accents) */
+    --wine-100: #F5D7DB;
+    --wine-300: #C96A78;
+    --wine-500: #7A1F2B;
+    --wine-700: #5A1620;
+
+    /* Navy (Deep Structure) */
+    --navy-100: #E4EAF1;
+    --navy-300: #4A6B8A;
+    --navy-500: #0E1A2B;
+    --navy-700: #09111D;
+    --navy-900: #050A12;
+
+    /* Gray (Neutrals) */
+    --gray-50: #F9FAFB;
+    --gray-100: #F3F4F6;
+    --gray-300: #D1D5DB;
+    --gray-500: #6B7280;
+    --gray-700: #374151;
+    --gray-900: #111827;
+
+    /* Sky (Info / Links) */
+    --sky-200: #B8DCEF;
+    --sky-400: #5FA8D3;
+    --sky-600: #2B7FB3;
+
+    /* Green (Success) */
+    --green-200: #BFD8D0;
+    --green-400: #6FA89A;
+    --green-600: #2F5D50;
+
+    /* --- SEMANTIC ROLES (Light Mode Default) --- */
+    --bg-main: var(--gray-50);
+    --bg-card: #FFFFFF;
+    --bg-header: rgba(255, 255, 255, 0.8);
+
+    --text-primary: var(--navy-500);
+    --text-secondary: var(--gray-500);
+    --text-highlight: var(--sky-600);
+
+    --border-color: var(--gray-300);
+
+    --primary: var(--navy-500);
+    --primary-hover: var(--navy-700);
+
+    --secondary: var(--sky-400);
+    --error: var(--wine-500);
+
+    --info: var(--sky-400);
+    --success: var(--green-600);
+
+    /* UI Variables */
+    --container-width: 1200px;
+    --header-height: 80px;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
+    --transition-fast: 0.2s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    /* Glass Effect Base */
+    --bg-glass: rgba(255, 255, 255, 0.4);
+    /* More transparent to see particles */
+}
+
+/* --- DARK MODE --- */
+[data-theme="dark"] {
+    --bg-main: var(--navy-900);
+    --bg-card: rgba(9, 17, 29, 0.6);
+    /* Navy-700 with opacity */
+    --bg-header: rgba(9, 17, 29, 0.7);
+
+    --text-primary: #E6E8EB;
+    --text-secondary: var(--gray-300);
+    --text-highlight: var(--sky-400);
+
+    --border-color: rgba(55, 65, 81, 0.5);
+    /* Gray-700 transparent */
+
+    --primary: var(--navy-300);
+    /* Lighter Navy/Steel Blue for dark mode visibility */
+    --primary-hover: var(--sky-600);
+    /* Was var(--navy-100) - too bright/white */
+
+    --secondary: var(--sky-400);
+    --error: var(--wine-300);
+
+    --info: var(--sky-200);
+    --success: var(--green-400);
+
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+
+    --bg-glass: rgba(15, 23, 42, 0.5);
+    /* More transparent */
+}

@@ -1,0 +1,81 @@
+/* Skills */
+.skill-pill {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: var(--transition-fast);
+}
+
+.skill-pill:hover {
+    border-color: var(--sky-400);
+    /* Was var(--primary) */
+    color: var(--sky-600);
+    /* Was var(--primary) */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skill-pill svg {
+    color: var(--navy-300);
+    /* Was var(--primary) */
+}
+
+/* Dark mode adjustment for visibility */
+[data-theme="dark"] .skill-pill:hover {
+    color: var(--sky-400);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Categorized Skills Layout */
+.skills-grid-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+}
+
+.skill-category {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill-category-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Soft Skills Variant */
+.skill-pill-soft {
+    border-color: var(--primary);
+    /* Highlight border */
+    background: rgba(var(--primary-rgb), 0.05);
+    /* Slight tint if possible, or just transparent */
+}
+
+.skill-pill-soft:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .skills-grid-categories {
+        grid-template-columns: 1fr;
+    }
+}

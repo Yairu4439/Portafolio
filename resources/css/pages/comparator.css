@@ -1,0 +1,255 @@
+/* Code Comparator Page Styles */
+
+.comparator-section {
+    /* Layout Dimensions */
+    width: 90%;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    /* Flex layout */
+    display: flex;
+    flex-direction: column;
+
+    /* Full viewport height minus header and margins */
+    min-height: 90vh;
+    height: calc(100vh - 20px);
+    /* Even more height */
+    padding-bottom: 0px;
+    padding-top: calc(var(--header-height) + 1rem) !important;
+    /* Override structure.css padding */
+}
+
+.comparator-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding: 0 0.25rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-title {
+    font-size: 1.25rem;
+    /* text-xl */
+    font-weight: 700;
+    /* font-bold */
+    color: var(--text-primary);
+    /* text-gray-100 equivalent */
+    letter-spacing: -0.025em;
+    /* tracking-tight */
+    margin: 0;
+}
+
+.header-separator {
+    color: var(--text-muted);
+    /* text-gray-600 */
+    display: none;
+}
+
+.header-subtitle {
+    font-size: 0.875rem;
+    /* text-sm */
+    color: var(--text-secondary);
+    /* text-gray-400 */
+    margin: 0;
+    padding-top: 0.125rem;
+    display: none;
+}
+
+@media (min-width: 768px) {
+
+    .header-separator,
+    .header-subtitle {
+        display: block;
+    }
+}
+
+.comparator-card {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    height: 100%;
+}
+
+.comparator-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    background: var(--bg-glass);
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(8px);
+    flex-shrink: 0;
+    /* Prevent shrinking */
+}
+
+.comparator-editor-wrapper {
+    flex-grow: 1;
+    position: relative;
+    /* Ensure it takes remaining space */
+    height: 100%;
+    min-height: 600px;
+}
+
+/* Language Selector */
+.language-select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.language-select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--bg-glass);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.35rem 2rem 0.35rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    backdrop-filter: blur(4px);
+}
+
+.language-select:hover {
+    border-color: var(--sky-400);
+    box-shadow: 0 0 0 2px rgba(95, 168, 211, 0.1);
+}
+
+.language-select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(14, 26, 43, 0.2);
+}
+
+.language-select-icon {
+    position: absolute;
+    right: 0.75rem;
+    pointer-events: none;
+    color: var(--text-secondary);
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Indicators */
+.indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-full);
+    border: 1px solid transparent;
+}
+
+.indicator-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.indicator-original {
+    color: #ef4444;
+    /* Tech Red */
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+.indicator-original .indicator-dot {
+    background-color: #ef4444;
+}
+
+.indicator-modified {
+    color: #22c55e;
+    /* Tech Green */
+    border-color: rgba(34, 197, 94, 0.2);
+}
+
+.indicator-modified .indicator-dot {
+    background-color: #22c55e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .comparator-section {
+        height: auto;
+    }
+
+    .comparator-editor-wrapper {
+        min-height: 500px;
+        /* Fixed height on mobile */
+    }
+
+    .comparator-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .actions {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+/* Merge Functionality - Bidirectional Arrows */
+
+/* Common arrow styles */
+.merge-arrow-left,
+.merge-arrow-right {
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease;
+}
+
+/* Merge Left Arrow (→) - on Original editor, copies Modified to Original */
+.merge-arrow-left::before {
+    content: '→';
+    font-weight: bold;
+    color: #22c55e;
+    font-size: 1.1rem;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.merge-arrow-left:hover::before {
+    color: #4ade80;
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+/* Merge Right Arrow (←) - on Modified editor, copies Original to Modified */
+.merge-arrow-right::before {
+    content: '←';
+    font-weight: bold;
+    color: #ef4444;
+    font-size: 1.1rem;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.merge-arrow-right:hover::before {
+    color: #f87171;
+    opacity: 1;
+    transform: scale(1.3);
+}
